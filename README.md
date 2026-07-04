@@ -1,6 +1,7 @@
 # Silicon-14: Premium Tech E-Commerce Platform
 
-![Silicon-14 Mockup](https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=1000&auto=format&fit=crop) *(Consider replacing with an actual screenshot of your app)*
+![Silicon-14 Mockup]
+![alt text](image.png)
 
 Silicon-14 is a modern, fully-responsive e-commerce web application built with React.js. It features a sleek, premium user interface designed for tech enthusiasts to browse, filter, and purchase top-tier electronics.
 
@@ -65,4 +66,5 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 ## 👨‍💻 Developed By
 
 Bhargav K
+
 *Aspiring  Developer* 
