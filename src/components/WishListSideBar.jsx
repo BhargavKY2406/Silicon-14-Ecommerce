@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { WishlistContext } from '../context/WishlistContext';
 
-const WishListSideBar = ({
+const WishListSideBar = () => {
+  const {
     isWishlistOpen,
     setIsWishlistOpen,
     wishlistProducts,
     moveToCart,
     toggleWishlist
-}) => {
+  } = useContext(WishlistContext);
+
   return (
     <div>
     {/* Wishlist Sidebar Overlay */}

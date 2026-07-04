@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { UIContext } from '../context/UIContext';
 
-const Hero = ({
-    scrollToSection
-}) => {
+const Hero = () => {
+  const { scrollToSection } = useContext(UIContext);
+
   return (
     <div>
             {/* Hero Section */}

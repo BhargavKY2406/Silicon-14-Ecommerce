@@ -1,16 +1,15 @@
-const NavigationBar = ({
-  activeSection,
-  scrollToSection,
-  isDarkMode,
-  setIsDarkMode,
-  wishlist,
-  setIsWishlistOpen,
-  cartCount,
-  setIsCartOpen,
-  username,
-  handleSignOut,
-  setShowSignIn
-}) => {
+import React, { useContext } from 'react';
+import { UIContext } from '../context/UIContext';
+import { AuthContext } from '../context/AuthContext';
+import { WishlistContext } from '../context/WishlistContext';
+import { CartContext } from '../context/CartContext';
+
+const NavigationBar = () => {
+  const { activeSection, scrollToSection, isDarkMode, setIsDarkMode } = useContext(UIContext);
+  const { wishlist, setIsWishlistOpen } = useContext(WishlistContext);
+  const { cartCount, setIsCartOpen } = useContext(CartContext);
+  const { username, handleSignOut, setShowSignIn } = useContext(AuthContext);
+
   return (
     <div>
             {/* Navigation */}

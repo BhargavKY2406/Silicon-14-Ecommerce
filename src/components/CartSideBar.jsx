@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
-const CartSideBar = ({
+const CartSideBar = () => {
+  const {
     isCartOpen,
     setIsCartOpen,
     cartItems,
@@ -8,7 +10,8 @@ const CartSideBar = ({
     removeFromCart,
     cartCount,
     cartTotal
-}) => {
+  } = useContext(CartContext);
+
   return (
     <div>
             {/* Cart Sidebar Overlay */}

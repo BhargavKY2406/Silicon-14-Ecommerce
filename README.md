@@ -7,7 +7,8 @@ Silicon-14 is a modern, fully-responsive e-commerce web application built with R
 ## ✨ Features
 
 - **Dynamic Data Fetching**: Simulates a real-world backend by fetching product data asynchronously via a mock API (`fetch` and `useEffect`).
-- **Advanced State Management**: Efficiently handles complex states like Shopping Cart, Wishlist, Product Filtering, and Sorting using React hooks.
+- **Advanced State Management**: Efficiently handles complex states like Shopping Cart, Wishlist, Product Filtering, and Sorting using the Context API to prevent prop drilling.
+- **useRef Integration**: Enhances user experience by automatically focusing the search input field upon rendering the products section.
 - **Persistent Storage**: Utilizes `localStorage` to ensure user Cart and Wishlist data is saved across browser sessions.
 - **Filtering & Sorting Engine**: Users can instantly search by product name, filter by specific brands (Apple, Samsung, Sony, etc.), and sort by price, rating, or name.
 - **Premium UI/UX**: Features a highly aesthetic, responsive design with dark mode, interactive hover states, scroll-spy navigation, and smooth micro-animations.
@@ -18,7 +19,7 @@ Silicon-14 is a modern, fully-responsive e-commerce web application built with R
 - **Frontend Framework**: React 19 (via Vite)
 - **Styling**: Vanilla CSS3 with Custom Properties (CSS Variables) for theming
 - **Data Fetching**: Native Fetch API
-- **State Management**: React `useState`, `useEffect`
+- **State Management**: React `useState`, `useEffect`, `useContext`, `useRef` and Context API
 - **Deployment**: Vercel
 
 ## 🚀 Getting Started
@@ -55,6 +56,8 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 │   ├── products.json        # Mock API data
 ├── src/
 │   ├── components/          # Reusable UI components (Hero, Navigation, etc.)
+│   ├── context/
+│   │   └── AppContext.jsx   # Global Context API store
 │   ├── index.css            # Global CSS variables and resets
 │   ├── App.css              # Main application styles
 │   ├── App.jsx              # Main container and state hub

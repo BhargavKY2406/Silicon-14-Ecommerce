@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { ProductContext } from '../context/ProductContext';
+import { CartContext } from '../context/CartContext';
 
-const DealsSection = ({
-    dealProducts,
-    addToCart
-}) => {
+const DealsSection = () => {
+  const { dealProducts } = useContext(ProductContext);
+  const { addToCart } = useContext(CartContext);
+
   return (
     <div>
     {/* Deals Section */}

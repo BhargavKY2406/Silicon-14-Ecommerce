@@ -1,23 +1,26 @@
-
-
+import React, { useContext } from 'react';
 import ProductCard from './ProductCard';
+import { ProductContext } from '../context/ProductContext';
+import { CartContext } from '../context/CartContext';
+import { WishlistContext } from '../context/WishlistContext';
+import { UIContext } from '../context/UIContext';
 
-const ProductsSection = ({
+const ProductsSection = () => {
+  const {
+    allBrands,
     searchTerm,
     setSearchTerm,
     selectedBrand,
     setSelectedBrand,
-    allBrands,
     sortBy,
     setSortBy,
-    cartCount,
-    cartTotal,
-    setIsCartOpen,
-    filteredProducts,
-    wishlist,
-    addToCart,
-    toggleWishlist
-}) => {
+    filteredProducts
+  } = useContext(ProductContext);
+
+  const { searchInputRef } = useContext(UIContext);
+  const { wishlist, toggleWishlist } = useContext(WishlistContext);
+  const { addToCart, cartCount, cartTotal, setIsCartOpen } = useContext(CartContext);
+
   return (
     <div>
     {/* Products Section */}
@@ -32,14 +35,31 @@ const ProductsSection = ({
         {/* Filter Controls */}
         <div className="filter-controls">
           {/* Search Input */}
-          <div className="filter-group">
-            <input
-              type="text"
-              placeholder="🔍 Search products..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="search-input"
-            />
+          <div className="filter-group search-group">
+            <div className="search-input-wrapper">
+              <svg 
+                className="search-icon" 
+                width="18" 
+                height="18" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input
+                type="text"
+                placeholder="Search products..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="search-input has-icon"
+                ref={searchInputRef}
+              />
+            </div>
           </div>
 
           {/* Brand Filter */}

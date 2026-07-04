@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
 
-const SignIn = ({
+const SignIn = () => {
+  const {
     showSignIn,
     setShowSignIn,
     signInInput,
     setSignInInput,
     handleSignIn    
-}) => {
+  } = useContext(AuthContext);
+
   return (
     <div>
     {/* Sign In Modal */}

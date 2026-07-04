@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { ProductContext } from '../context/ProductContext';
+import { UIContext } from '../context/UIContext';
 
-const SupportSection = ({
-    faqData,
-    openFaq,
-    setOpenFaq
-}) => {
+const SupportSection = () => {
+  const { faqData } = useContext(ProductContext);
+  const { openFaq, setOpenFaq } = useContext(UIContext);
+
   return (
     <div>
     {/* Support Section */}
