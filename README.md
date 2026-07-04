@@ -1,7 +1,6 @@
 # Silicon-14: Premium Tech E-Commerce Platform
 
-![Silicon-14 Mockup]
-![alt text](image.png)
+(image.png)
 
 Silicon-14 is a modern, fully-responsive e-commerce web application built with React.js. It features a sleek, premium user interface designed for tech enthusiasts to browse, filter, and purchase top-tier electronics.
 
